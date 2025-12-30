@@ -43,13 +43,7 @@ venv.bak/
 # Credentials et fichiers sensibles (NE PAS COMMITER)
 auth/credentials.json
 auth/token.json
-*.p12
 
-# Signature - Exclure les certificats mais garder la structure
-signature/*/*.p12
-signature/*/.*
-!signature/.gitkeep
-!signature/README.md
 
 # Fichiers temporaires
 *.log
