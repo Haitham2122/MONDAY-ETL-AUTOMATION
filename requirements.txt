@@ -1,0 +1,27 @@
+# API et serveur web
+fastapi>=0.68.0
+uvicorn[standard]>=0.27.1
+python-multipart>=0.0.6
+gunicorn==21.2.0
+
+# Configuration et environnement
+python-dotenv>=0.19.0
+nest-asyncio>=1.5.7
+futures3>=1.0.0  # Pour concurrent.futures sur Python 3
+
+# Traitement des PDF et images
+pyhanko>=0.20.0
+PyMuPDF>=1.22.5
+pillow>=10.0.0
+
+# Requêtes HTTP
+requests>=2.31.0
+
+# Google Drive API
+google-api-python-client>=2.100.0
+google-auth-httplib2>=0.1.0
+google-auth-oauthlib>=1.1.0
+
+# Manipulation de données
+numpy>=1.24.0
+fpdf2>=2.7.5

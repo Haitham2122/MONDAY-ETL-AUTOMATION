@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: fastapi-monday-gee
+    env: python
+    region: frankfurt  # Europe region
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -w 3 -k uvicorn.workers.UvicornWorker --timeout 240 app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12
+      - key: PYTHONUNBUFFERED
+        value: "true"
+      - key: MAX_WORKERS
+        value: "3"
+    healthCheckPath: /health
+    autoDeploy: true
+    numInstances: 1
+    domains:
+      - monday-gee.onrender.com
+    disk:
+      name: temp-storage
+      mountPath: /tmp
+      sizeGB: 1
