@@ -1,0 +1,16 @@
+# Ce dossier contient les certificats de signature (.p12)
+# Les fichiers .p12 sont exclus du Git pour des raisons de sécurité
+# 
+# Structure attendue :
+# signature/
+#   ├── nanou/
+#   │   └── certificat.p12
+#   ├── ronald/
+#   │   └── certificat.p12
+#   ├── Yassine/
+#   │   └── certificat.p12
+#   └── zakaria/
+#       └── certificat.p12
+#
+# ⚠️ NE JAMAIS commiter les fichiers .p12 dans Git !
+
