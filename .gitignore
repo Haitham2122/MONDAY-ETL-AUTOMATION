@@ -41,8 +41,7 @@ venv.bak/
 .DS_Store
 
 # Credentials et fichiers sensibles (NE PAS COMMITER)
-auth/credentials.json
-auth/token.json
+
 
 
 # Fichiers temporaires
