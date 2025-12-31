@@ -18,9 +18,9 @@ set MONDAY_API_KEY in environment (do not hardcode)
 
 # ====================== User Config ======================
 
-BOARD_ID = 9962467444
+BOARD_ID = 5001741596
 TEXT_COLUMN_ID = "text_mkvehxzn"
-STATUS_COLUMN_ID = "status"
+STATUS_COLUMN_ID = "color_mkvxc381"
 STATUS_VALUE = "Dossier déposé"
 CREATE_LABEL_IF_MISSING = False
 
@@ -38,20 +38,20 @@ DO_CREATE_DRIVE  = True    # False => dry run (no Drive calls)
 # Mets les vrais IDs Monday de TON board.
 COLUMN_IDS = {
     # E-1
-    "CONTRATO":         "file_mkp6r6am",
+    "CONTRATO":         "file_mkvy892y",
     # E-3
-    "FICHA_RES020":     "file_mkp6ck29",
-    "DECLARACION":      "file_mkp6d764",
-    "FACTURA":          "file_mkp6141c",
-    "INFORME_FOTO":     "file_mkqz87mv",
-    "CERTIFICADO_INST": "file_mkqzrp4g",
+    "FICHA_RES020":     "file_mkvy7naj",
+    "DECLARACION":      "file_mkvy8sp5",
+    "FACTURA":          "file_mkvy87gx",
+    "INFORME_FOTO":     "file_mkvyaef0",
+    "CERTIFICADO_INST": "file_mkvywwf5",
     # E-3-6 (désormais sur DES COLONNES DISTINCTES)
-    "CEE_FINAL":        "file_mkvf24ev",   # <-- remplace par ton vrai column_id
-    "REGISTRO":         "file_mkvf411b",    # <-- remplace par ton vrai column_id
-    "PAGO":             "file_mkvfzwf0",        # <-- remplace par ton vrai column_id
+    "CEE_FINAL":        "file_mkvy5f3n",   # <-- remplace par ton vrai column_id
+    "REGISTRO":         "file_mkvywnbx",    # <-- remplace par ton vrai column_id
+    "PAGO":             "file_mkvydbq5",        # <-- remplace par ton vrai column_id
     # E-4
-    "DNI":              "dup__of_pi_ce_jointe_mkmp9gke",
-    "EXCEL":            "file_mkqz2sk3",
+    "DNI":              "file_mkvyb1g7",
+    "EXCEL":            "file_mkvy6b1j",
 }
 
 # ------------- (B) Matching rules per column (EDIT AS NEEDED) -------------
