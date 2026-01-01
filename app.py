@@ -332,7 +332,7 @@ async def depot(request: Dict[Any, Any]):
         return {"message": "deposé avec succé!"}
     except Exception as e:
         print(f"Error in depot_leyton: {str(e)}")
-        return {"error": str(e)}
+        return request
 
 
 
