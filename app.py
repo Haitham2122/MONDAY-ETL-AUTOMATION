@@ -320,7 +320,7 @@ async def depot(request: Dict[Any, Any]):
         print("Received request:", request)
         j = request['event']['pulseId']
         
-        lot=get_column_value(api_key, [j], "text_mkvjbysw")[str(j)][0]['text']
+        lot=get_column_value(api_key, [j], "text_mkvy320e")[str(j)][0]['text']
         deposit_single_item(
             item_id=j,          # ID de l'item Monday
             lot_folder_name=lot,    # dossier de lot (créé/cherché sous ROOT_PARENT_ID)
