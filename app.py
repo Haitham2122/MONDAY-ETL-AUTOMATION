@@ -52,18 +52,41 @@ async def scann(request: Dict[Any, Any]):
         """
 
         j = request['event']['pulseId']
-        column_id = "file_mkvywwf5"
-        s = get_column_value(api_key, [j], column_id)
-        ids = extract_pdf_asset_ids(s)  # -> [(assetId, fileName), ...]
-        print(ids)
-        for asset_id, base_name in ids:
+        column_id_1 = "file_mkvywwf5"
+        
+        s_1 = get_column_value(api_key, [j], column_id_1)
+        ids_1 = extract_pdf_asset_ids(s_1)  # -> [(assetId, fileName), ...]
+        
+        column_id_2 = "file_mkvyx0l3"
+        s_2 = get_column_value(api_key, [j], column_id_2)
+        ids_2 = extract_pdf_asset_ids(s_2)  # -> [(assetId, fileName), ...]
+        print(ids_2)
+        for asset_id, base_name in ids_1:
             url = get_asset_public_url(api_key, asset_id)
             print(url)
             sign_pdf_url_and_transfer(
                 pdf_url=url,
                 base_filename=base_name,           # "E1-3-3 FACTURA.pdf" par ex.
                 item_id=j,
-                column_id=column_id,
+                column_id=column_id_1,
+                p12_path="signature/ronald/Certificat_Digital.p12",
+                p12_password=b"1234",
+                do_compress=True,                  # désactive si tu veux garder la source
+                compress_dpi=150,                  # DPI équilibré (150 au lieu de 300)
+                compress_quality=85,               # Qualité équilibrée (85 au lieu de 95)
+                sig_box=(400, 600, 550, 700),      # nouvelle position dans la zone bleue en bas à droite
+                field_name="Signature1",
+                signed_suffix=" SIGNÉ",            # tu peux mettre " SIGNED" si tu préfères
+                stamp_text="Firmado por: %(signer)s\nFecha: %(ts)s",
+            )
+        for asset_id, base_name in ids_2:
+            url = get_asset_public_url(api_key, asset_id)
+            print(url)
+            sign_pdf_url_and_transfer(
+                pdf_url=url,
+                base_filename=base_name,           # "E1-3-3 FACTURA.pdf" par ex.
+                item_id=j,
+                column_id=column_id_2,
                 p12_path="signature/ronald/Certificat_Digital.p12",
                 p12_password=b"1234",
                 do_compress=True,                  # désactive si tu veux garder la source
