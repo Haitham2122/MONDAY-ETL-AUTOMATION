@@ -53,11 +53,12 @@ async def scann(request: Dict[Any, Any]):
 
         j = request['event']['pulseId']
         column_id_1 = "file_mkvywwf5"
+        column_id_2 = "file_mkvyaef0"
         
         s_1 = get_column_value(api_key, [j], column_id_1)
         ids_1 = extract_pdf_asset_ids(s_1)  # -> [(assetId, fileName), ...]
         
-        column_id_2 = "file_mkqz87mv"
+        
         s_2 = get_column_value(api_key, [j], column_id_2)
         ids_2 = extract_pdf_asset_ids(s_2)  # -> [(assetId, fileName), ...]
         print(ids_2)
